@@ -1,0 +1,146 @@
+/* DEFAULTS */
+html, body {
+    background-color: #000; /* Set background color to black */
+    width: 100%; /* Ensure full width */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* NAVIGATION */
+
+.nav-link-hover:hover {
+    color: #ffc107 !important; /* Use the warning color */
+}
+
+/* Dropdown menu styling to match the navbar */
+.navbar .dropdown-menu {
+    background-color: #343a40; /* Same as navbar background */
+    /* If you have a specific font family in use for the navbar, apply it here as well */
+  }
+  
+  /* Dropdown item styling for text color and hover effects */
+  .navbar .dropdown-menu .dropdown-item {
+    color: #ffffff; /* White text for dropdown items */
+    font-weight: normal; /* Match the font weight as per your preference, adjust if needed */
+  }
+  
+  .navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #ffc107; /* Optional: Change background color on hover to match the "warning" theme */
+    color: #343a40; /* Change text color on hover for better contrast, if needed */
+  }
+  
+/* HERO */
+.home {
+    position: relative;
+    background-image: url('../img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8); /* Dark grey overlay */
+    z-index: 1;
+  }
+  
+  /* Ensure content is above the overlay */
+  .home > .container-lg {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Optionally, if you want to ensure the image covers older browsers that don't support background-attachment: fixed */
+  @supports not (background-attachment: fixed) {
+    .home {
+      background-attachment: scroll;
+    }
+  }
+
+
+  .coming-soon-message {
+    font-size: 4rem; /* Adjust the size as needed */
+    font-weight: bold;
+    margin-bottom: 2rem; /* Adds some space between this message and the rest of the content */
+  }
+
+  
+.coming-soon-alert h1, .subscription-form h2 {
+    margin-bottom: 1rem;
+}
+
+.subscription-form {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form-control {
+    background-color: #ffffff;
+    border-color: #ffc107;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.btn-warning {
+    border-color: #ffc107;
+}
+
+.wide-form input, .wide-form textarea {
+  width: 100%; /* Example to make it full width within its container */
+  max-width: 100%; /* Ensures it doesn't exceed its parent's width */
+}
+
+
+/* COMING SOON */
+.coming-soon {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    color: #fff;
+  }
+  
+  .overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+/* FOOTER */
+footer {
+    background-color: #343a40; /* Dark grey, matching your navbar */
+    color: #ffffff; /* White text color for contrast */
+    padding: 20px 0;
+  }
+  
+  footer a {
+    color: #ffc107; /* Maintaining the 'warning' color for links, similar to the navbar */
+    text-decoration: none; /* Optional: Removes underline from links */
+  }
+  
+  footer a:hover {
+    color: #ffffff; /* White text color for link hover, or choose another color that fits your design */
+    text-decoration: underline; /* Optional: Adds underline on hover */
+  }
+  
+  footer p {
+    margin-bottom: 0;
+  }
+  
